@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-y: auto;">
+
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous">
+  <link rel="preload" as="style" onload="this.rel=&#39;stylesheet&#39;" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap">
+
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow" />
+  <!-- SVG favicon first choice (renders vector-crisp at any device resolution/DPI), ICO as
+       fallback. The ICO deliberately carries only 32+16 frames: browsers that ignore
+       size-matching (Vivaldi) downscale the LARGEST frame, and the bold 32 px artwork survives
+       that where the full-detail 48 px mark turned to mush. The ?v= query busts the browsers'
+       (very sticky) favicon cache — bump it whenever the icon artwork changes.
+       v4 = the 2026-09 brand mark. -->
+  <link rel="icon" href="/site-preview/ui/favicon.ico?v=4" sizes="32x32 16x16" />
+  <link rel="icon" type="image/svg+xml" href="/site-preview/ui/favicon.svg?v=4" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlobalArchive 2.0</title>
+  <style>
+    /* Pin Vuetify 4's CSS-layer priority order before any stylesheet loads. Layer order is
+     * fixed at first occurrence, and our module graph reaches vite-plugin-vuetify's
+     * per-component styles (@layer vuetify-components) before vuetify's main.css declares
+     * the intended order — which would invert it and let the vuetify-core reset (e.g.
+     * "button { font: inherit }") override component styles like VBtn's font metrics.
+     * The leading `leaflet` layer keeps leaflet.css (imported into it via
+     * src/styles/leaflet-layered.css) below all Vuetify styles. */
+    @layer leaflet, vuetify-core, vuetify-components, vuetify-overrides, vuetify-utilities, vuetify-final;
+  </style>
+  <script type="module" crossorigin src="/site-preview/ui/assets/index-BfALGx4v.js"></script>
+  <link rel="modulepreload" crossorigin href="/site-preview/ui/assets/rolldown-runtime-QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/site-preview/ui/assets/VBtn-C_Ihm44r.js">
+  <link rel="modulepreload" crossorigin href="/site-preview/ui/assets/VOverlay-DN7cSfbi.js">
+  <link rel="modulepreload" crossorigin href="/site-preview/ui/assets/preload-helper-CJLOmcVT.js">
+  <link rel="stylesheet" crossorigin href="/site-preview/ui/assets/VBtn-Dhcc8Bvn.css">
+  <link rel="stylesheet" crossorigin href="/site-preview/ui/assets/VOverlay-KrFVufPb.css">
+  <link rel="stylesheet" crossorigin href="/site-preview/ui/assets/preload-helper-JS3ezjct.css">
+  <link rel="stylesheet" crossorigin href="/site-preview/ui/assets/index-Dw9I9-sK.css">
+</head>
+
+<body>
+  <div id="app"></div>
+</body>
+
+</html>
